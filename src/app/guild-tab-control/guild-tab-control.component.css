@@ -1,0 +1,53 @@
+.page-control {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center the content horizontally */
+}
+
+mat-grid-list {
+  width: 100%;
+  /* Allow the grid list to take up the full width of its container */
+}
+
+mat-grid-tile {
+  display: flex;
+  justify-content: center;
+  /* Center content horizontally in the tile */
+}
+
+mat-card-title {
+  margin-bottom: 1rem;
+}
+
+mat-card {
+  width: 100%;
+  height: 100%;
+}
+
+.role-selection {
+  display: flex;
+  flex-direction: column;
+  /* Stack the select elements vertically */
+  gap: 15px;
+  /* Space between the fields */
+}
+
+.role-field {
+  width: 100%;
+  /* Make sure the fields are full-width within the card */
+}
+
+.mat-grid-list {
+  width: 100%;
+  height: max-content;
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
