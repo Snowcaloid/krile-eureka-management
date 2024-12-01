@@ -1,0 +1,34 @@
+mat-card.fields {
+  width: 100%;
+}
+
+.left-column-flex {
+  width: 100%;
+  height: 100%;
+}
+
+table.events-table {
+  height: 100%!important;
+}
+
+div.field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+div.field-label {
+  width: 20%;
+  vertical-align: middle;
+}
+
+div.field-value {
+  width: 80%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+

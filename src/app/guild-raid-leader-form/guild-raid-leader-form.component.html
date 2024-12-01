@@ -1,0 +1,72 @@
+<mat-grid-list cols="2" rowHeight="fit" style="height: 60rem">
+  <mat-grid-tile>
+    <div class="left-column-flex">
+      <mat-card class="fields">
+        <mat-card-header>
+          <mat-card-title>Events</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="example-container">
+            <div class="field">
+              <div class="field-label">ID</div>
+              <div class="field-value">{{ editableFields.toString() }}</div>
+            </div>
+            <div class="field" **ngFor="let field of editableFields">
+              <div class="field-label">{{field.label}}</div>
+              <div class="field-value">
+                <mat-form-field subscriptSizing="dynamic">
+                  <mat-label>{{field.label}}</mat-label>
+                  <mat-select>
+                    <mat-option **ngFor="let option of field.options"
+                      value="option.value"
+                      >{{ option.name }}</mat-option
+                    >
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <table
+        class="events-table"
+        mat-table
+        [dataSource]="dataSource"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="event_type">
+          <th mat-header-cell *matHeaderCellDef>Type</th>
+          <td mat-cell *matCellDef="let element">{{ element.event_type }}</td>
+        </ng-container>
+        <ng-container matColumnDef="timestamp">
+          <th mat-header-cell *matHeaderCellDef>Timestamp</th>
+          <td mat-cell *matCellDef="let element">{{ element.timestamp }}</td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+        </ng-container>
+        <ng-container matColumnDef="rl">
+          <th mat-header-cell *matHeaderCellDef>Raid Leader</th>
+          <td mat-cell *matCellDef="let element">{{ element.rl }}</td>
+        </ng-container>
+        <ng-container matColumnDef="use_support">
+          <th mat-header-cell *matHeaderCellDef>Support?</th>
+          <td mat-cell *matCellDef="let element">{{ element.use_support }}</td>
+        </ng-container>
+        <ng-container matColumnDef="signup_id">
+          <th mat-header-cell *matHeaderCellDef>Signup?</th>
+          <td mat-cell *matCellDef="let element">{{ element.signup_id }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile> signups column placeholder </mat-grid-tile>
+</mat-grid-list>
