@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GuildTabControlComponent } from './guild-tab-control/guild-tab-control.component';
 import { Guild } from './guild';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @Component({
   selector: 'app-root',

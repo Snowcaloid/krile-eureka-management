@@ -1,0 +1,40 @@
+div.top-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+div.top-row-child {
+  width: 50%;
+}
+
+div.field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+div.field-label {
+  width: 20%;
+  vertical-align: middle;
+}
+
+div.field-value {
+  width: 80%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field.date-picker {
+  width: 50%;
+}
+
+mat-form-field.time-picker {
+  width: 50%;
+}
