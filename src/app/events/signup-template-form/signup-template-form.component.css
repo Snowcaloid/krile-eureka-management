@@ -6,8 +6,57 @@ div.top-row {
   width: 100%;
 }
 
-div.top-row-child {
-  width: 50%;
+div.signup-details {
+  width: 33%;
+}
+
+div.signup-slots-table {
+  width: 40%;
+}
+
+div.signup-slots-details {
+  width: 100%;
+  height: 100%;
+}
+
+.mat-column-slotID {
+  width: 10%!important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.mat-column-slotName {
+  width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.mat-column-slotParty {
+  width: 15%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.mat-column-slotSlot {
+  width: 15%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+div.signup-slots {
+  width: 67%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
 }
 
 div.field {
