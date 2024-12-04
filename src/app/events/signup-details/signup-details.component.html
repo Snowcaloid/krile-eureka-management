@@ -1,1 +1,226 @@
-<p>signup-details works!</p>
+<div class="page-control">
+  <mat-tab-group>
+    <mat-tab label="Details">
+      <div class="tab-content">
+        <div class="field">
+          <div class="field-label">ID</div>
+          <div class="field-value">{{ current.id }}</div>
+        </div>
+        <div class="field">
+          <div class="field-label">Owner</div>
+          <div class="field-value">
+            <mat-form-field subscriptSizing="dynamic">
+              <mat-label>Owner</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let rl of raid_leaders" [value]="rl.id">{{
+                  rl.name
+                }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">Name</div>
+          <div class="field-value">
+            <mat-form-field subscriptSizing="dynamic">
+              <mat-label>Name</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">Event Category</div>
+          <div class="field-value">
+            <mat-form-field subscriptSizing="dynamic">
+              <mat-label>Event Category</mat-label>
+              <mat-select>
+                <mat-option
+                  *ngFor="let category of event_categories"
+                  [value]="category.value"
+                  >{{ category.name }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">Party Count</div>
+          <div class="field-value">
+            <mat-form-field subscriptSizing="dynamic">
+              <mat-label>Party Count</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let party of parties" [value]="party">{{
+                  party
+                }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">Use support</div>
+          <div class="field-value">
+            <mat-slide-toggle></mat-slide-toggle>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Config">
+      <div class="field">
+        <div class="field-label">Recruitment Channel</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Recruitment Channel</mat-label>
+            <mat-select>
+              <mat-option
+                *ngFor="let channel of channels"
+                [value]="channel.id"
+                >{{ channel.name }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Use Passcodes</div>
+        <div class="field-value">
+          <mat-slide-toggle></mat-slide-toggle>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Create Recruitment Posts</div>
+        <div class="field-value">
+          <mat-slide-toggle></mat-slide-toggle>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Create Recruitment Post Thread</div>
+        <div class="field-value">
+          <mat-slide-toggle></mat-slide-toggle>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Delete Recruitment Posts after run</div>
+        <div class="field-value">
+          <mat-slide-toggle></mat-slide-toggle>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Passcode delay</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Passcode delay</mat-label>
+            <mat-select>
+              <mat-option
+                *ngFor="let delay of passcode_delays"
+                [value]="delay"
+                >{{ delay + " minutes" }} </mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Texts">
+      <div class="field">
+        <div class="field-label">Description</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Short Description</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Short Description</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Schedule Entry Text</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Schedule Entry Text</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Recruitment Post Title</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Recruitment Post Title</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Recruitment Post Text</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Recruitment Post Text</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Recruitment Post Thread Title</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Recruitment Post Thread Title</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Party Leader DM Text</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Party Leader DM Text</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Support Party Leader DM Text</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Support Party Leader DM Text</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Raid Leader DM Text</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Raid Leader DM Text</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Passcode DM Title</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Passcode DM Title</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">Passcode DM Text</div>
+        <div class="field-value">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Passcode DM Text</mat-label>
+            <textarea matInput placeholder="todo (val)"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+
+    </mat-tab>
+  </mat-tab-group>
+</div>
