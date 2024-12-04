@@ -1,14 +1,44 @@
 <div>
   <div class="field">
     <div class="field-label">ID</div>
-    <div class="field-value">{{current.id}}</div>
+    <div class="field-value">{{ current.id }}</div>
   </div>
   <div class="field">
     <div class="field-label">Name</div>
     <div class="field-value">
       <mat-form-field subscriptSizing="dynamic">
         <mat-label>Name</mat-label>
-        <textarea matInput placeholder="Name of the slot."></textarea>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="field">
+    <div class="field-label">Party</div>
+    <div class="field-value">
+      <mat-form-field subscriptSizing="dynamic">
+        <mat-label>Party</mat-label>
+        <mat-select>
+          <mat-option
+            *ngFor="let party of parties"
+            [value]="party"
+            >{{ party }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="field">
+    <div class="field-label">Slot</div>
+    <div class="field-value">
+      <mat-form-field subscriptSizing="dynamic">
+        <mat-label>Slot</mat-label>
+        <mat-select>
+          <mat-option
+            *ngFor="let slot of slots"
+            [value]="slot"
+            >{{ slot }}</mat-option
+          >
+        </mat-select>
       </mat-form-field>
     </div>
   </div>
